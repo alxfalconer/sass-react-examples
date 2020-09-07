@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #e4c681;
+  border: 0;
+  cursor: pointer;
+  transition-duration: 300ms;
+  border-radius: 30px;
+  height: 50px;
+  width: 200px;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #ffe082;
+  width: 250px;
+}
+
+/*# sourceMappingURL=1.1.simple-example.css.map */
