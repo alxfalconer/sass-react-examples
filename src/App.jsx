@@ -1,5 +1,5 @@
 import React from 'react';
-import './1.6.extends.scss';
+import './1.7.import.scss';
 
 export const App = () => {
     return (
@@ -7,9 +7,14 @@ export const App = () => {
             <div className='div-with-button'>
                 <button>Do something</button>
             </div>
-            <div className='div2-with-button'>
-                <button>Do something 2</button>
+            <div className='avatars'>
+            {
+                [96, 97, 98, 99].map(avatarNumber => (
+                    <div className={`avatar-${avatarNumber}`}/>
+                ))
+            }
             </div>
         </>
+
     );
 };

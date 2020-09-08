@@ -1,0 +1,58 @@
+$theme: dark;
+$height: 100%;
+
+/* Simple function */
+@function calculate_height() {
+  // very weird function, but still :)
+  @return $height / 2;
+}
+
+/* if/else function */
+%theme_background_color {
+  @if $theme == dark {
+    background-color: black;
+  } @else if ($theme == light) {
+    background-color: white;
+  } @else {
+    background: grey;
+  }
+}
+
+/* if/else function */
+%button_theme_color {
+  @if $theme == dark {
+    background-color: #e4c681;
+    color: #424242;
+  } @else if ($theme == light) {
+    background-color: #b59749;
+    color: #ffffff;
+  } @else {
+    background-color: grey;
+    color: #000000;
+  }
+}
+
+/* if/else function */
+%button_hover_theme_colors {
+  @if $theme == dark {
+    background-color: #e4c681;
+    color: #424242;
+  } @else if ($theme == light) {
+    background-color: #dba824;
+    color: #252222;
+  } @else {
+    background-color: grey;
+    color: #000000;
+  }
+}
+
+// loops
+$avatars: 96 97 98 99;
+
+@each $avatar in $avatars {
+  .avatar-#{$avatar} {
+    background: url(https://randomuser.me/api/portraits/men/#{$avatar}.jpg);
+    height: 120px;
+    width: 120px;
+  }
+}

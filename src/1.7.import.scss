@@ -1,0 +1,56 @@
+@import "1.7.functions-if-else-loop";
+
+%flex_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatars {
+  height: calculate_height();
+  @extend %flex_center;
+}
+
+%flex_with_color {
+  @extend %flex_center;
+  height: calculate_height();
+}
+
+%main_button {
+  @extend %button_theme_color;
+  border: 0;
+  cursor: pointer;
+  transition-duration: 300ms;
+  border-radius: 30px;
+  height: 50px;
+  width: 200px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+%hover_button {
+  @extend %button_hover_theme_colors;
+  width: 250px;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  @extend %theme_background_color;
+}
+
+.div-with-button {
+  @extend %flex_with_color;
+
+  button {
+    @extend %main_button;
+
+    &:hover {
+      @extend %hover_button;
+    }
+  }
+}
