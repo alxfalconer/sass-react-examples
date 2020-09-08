@@ -1,0 +1,44 @@
+$height: 100%;
+
+$button_color: #e4c681;
+$hovered_button_color: rgb(255, 220, 109);
+
+html, body {
+  height: $height;
+}
+
+#root {
+  height: $height;
+}
+
+.div-with-button {
+  height: $height;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  $height: 50px;
+
+  button {
+    background-color: $button_color;
+    border: 0;
+    cursor: pointer;
+    transition-duration: 300ms;
+    border-radius: 30px;
+
+    // 'Height' - will be overwritten by the last value - 50px instead of 100%
+    height: $height;
+    width: 200px;
+    color: #424242;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $hovered_button_color;
+      width: 250px;
+    }
+  }
+}
+
+
