@@ -1,13 +1,3 @@
-$height: 100%;
-
-$button_color: #e4c681;
-$hovered_button_color: rgb(255, 220, 109);
-
-.some-class {
-  height: 50%;
-  background-color: black;
-}
-
 /*
     Sometimes you want to write a style rule
     that’s only intended to be extended.
@@ -15,68 +5,31 @@ $hovered_button_color: rgb(255, 220, 109);
     which look like class selectors
     that start with % instead of .
 */
-%flex_center {
+%flex {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+}
+
+.some-class {
+  height: 50%;
+  background-color: black;
 }
 
 %flex_with_color {
-  @extend %flex_center;
+  @extend %flex;
   @extend .some-class;
 }
 
-%main_button {
-  background-color: $button_color;
-  border: 0;
-  cursor: pointer;
-  transition-duration: 300ms;
-  border-radius: 30px;
+%button_styles {
   height: 50px;
   width: 200px;
-  color: #424242;
-  font-size: 14px;
-  font-weight: 700;
 }
 
-%hover_button {
-  background-color: $hovered_button_color;
-  width: 250px;
-}
-
-html, body {
-  height: $height;
-}
-
-#root {
-  height: $height;
-}
-
-.div-with-button {
+div {
   @extend %flex_with_color;
 
   button {
-    @extend %main_button;
-    color:#424242;
+    @extend %button_styles;
+    color: #424242;
     background-color: #d966fb;
-
-    &:hover {
-      @extend %hover_button;
-    }
-  }
-}
-
-.div2-with-button {
-  @extend %flex_with_color;
-
-  button {
-    @extend %main_button;
-    color: red;
-    background-color: #a2df71;
-
-    &:hover {
-      @extend %hover_button;
-    }
   }
 }

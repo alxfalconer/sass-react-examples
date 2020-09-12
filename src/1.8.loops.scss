@@ -1,0 +1,7 @@
+$avatars: 96 97 98 99;
+
+@each $avatar in $avatars {
+  .avatar-#{$avatar} {
+    background: url(https://randomuser.me/api/portraits/men/#{$avatar}.jpg);
+  }
+}

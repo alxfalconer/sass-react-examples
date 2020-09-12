@@ -1,0 +1,40 @@
+/* Variant - 1 */
+button {
+  background-color: red;
+
+  @media (min-width: 700px) {
+    background-color: green;
+  }
+}
+
+/* Variant - 2 */
+
+$media-tablet: 700px;
+
+@mixin respond-to($media: tablet) {
+  @if $media == tablet {
+    @media (min-width: $media-tablet) {
+      @content
+    }
+  } @else {
+    @media (min-width: 320px) {
+      @content
+    }
+  }
+}
+
+.button-class {
+  width: 100px;
+  height: 40px;
+
+  &:hover {
+    width: 90%;
+    background-color: #ffe89d;
+  }
+
+  @include respond-to(tablet) {
+    width: 200px;
+    height: 80px;
+  }
+
+}

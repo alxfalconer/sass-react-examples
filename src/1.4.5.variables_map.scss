@@ -1,0 +1,11 @@
+@use "sass:map";
+
+$notification_colors: (
+        "success": green,
+        "info": yellow,
+        "warning": red,
+);
+
+.alert {
+  background-color: map.get($notification_colors, "warning");
+}

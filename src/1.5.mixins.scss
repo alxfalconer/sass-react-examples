@@ -1,65 +1,28 @@
-$height: 100%;
-
-$button_color: #e4c681;
-$hovered_button_color: rgb(255, 220, 109);
-
-// If nothing will be passed - "flex-direction" will be set to "row"
+//  If nothing will be passed - "flex-direction" will be set to "row"
 @mixin flex_center($direction: row) {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 @mixin flex_with_color($direction: row, $color: black) {
   @include flex_center($direction);
-  height: 50%;
   background-color: $color;
 }
 
-@mixin main_button($color: #424242, $background-color: $button_color) {
+@mixin colors($color: #424242, $background-color: red) {
   background-color: $background-color;
-  border: 0;
-  cursor: pointer;
-  transition-duration: 300ms;
-  border-radius: 30px;
-  height: 50px;
-  width: 200px;
   color: $color;
-  font-size: 14px;
-  font-weight: 700;
 }
 
 @mixin hover_button() {
-  background-color: $hovered_button_color;
+  background-color: green;
   width: 250px;
-}
-
-html, body {
-  height: $height;
-}
-
-#root {
-  height: $height;
 }
 
 .div-with-button {
   @include flex_with_color;
 
   button {
-    @include main_button(#424242, $button_color);
-
-    &:hover {
-      @include hover_button;
-    }
-  }
-}
-
-.div2-with-button {
-  @include flex_with_color;
-
-  button {
-    @include main_button(red, #a2df71);
+    @include colors(#424242, blue);
 
     &:hover {
       @include hover_button();

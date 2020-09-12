@@ -1,0 +1,27 @@
+/* Variant - 1 */
+button {
+  background-color: red;
+}
+@media (min-width: 700px) {
+  button {
+    background-color: green;
+  }
+}
+
+/* Variant - 2 */
+.button-class {
+  width: 100px;
+  height: 40px;
+}
+.button-class:hover {
+  width: 90%;
+  background-color: #ffe89d;
+}
+@media (min-width: 700px) {
+  .button-class {
+    width: 200px;
+    height: 80px;
+  }
+}
+
+/*# sourceMappingURL=1.9.media-queries.css.map */

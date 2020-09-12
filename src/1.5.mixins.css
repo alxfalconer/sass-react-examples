@@ -1,61 +1,14 @@
-html, body {
-    height: 100%;
-}
-
-#root {
-    height: 100%;
-}
-
 .div-with-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    background-color: black;
+  display: flex;
+  background-color: black;
 }
-
 .div-with-button button {
-    background-color: #e4c681;
-    border: 0;
-    cursor: pointer;
-    transition-duration: 300ms;
-    border-radius: 30px;
-    height: 50px;
-    width: 200px;
-    color: #424242;
-    font-size: 14px;
-    font-weight: 700;
+  background-color: blue;
+  color: #424242;
 }
-
 .div-with-button button:hover {
-    background-color: #ffdc6d;
-    width: 250px;
+  background-color: green;
+  width: 250px;
 }
 
-.div2-with-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    background-color: black;
-}
-
-.div2-with-button button {
-    background-color: #a2df71;
-    border: 0;
-    cursor: pointer;
-    transition-duration: 300ms;
-    border-radius: 30px;
-    height: 50px;
-    width: 200px;
-    color: red;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.div2-with-button button:hover {
-    background-color: #ffdc6d;
-    width: 250px;
-}
+/*# sourceMappingURL=1.5.mixins.css.map */

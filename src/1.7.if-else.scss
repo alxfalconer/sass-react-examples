@@ -1,0 +1,30 @@
+$theme: dark;
+$height: 100%;
+
+/* Simple function */
+@function calculate_height() {
+  // very weird function, but still :)
+  @return $height / 2;
+}
+
+/* if/else function */
+%button_theme_color {
+  @if $theme == dark {
+    background-color: #e4c681;
+    color: #424242;
+  } @else if ($theme == light) {
+    background-color: #b59749;
+    color: #ffffff;
+  } @else {
+    background-color: grey;
+    color: #000000;
+  }
+}
+
+button {
+  @extend %button_theme_color;
+  height: calculate_height();
+}
+
+// loops
+
