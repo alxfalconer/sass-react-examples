@@ -1,19 +1,17 @@
 html, body {
-    height: 100%;
+  height: 100%;
 }
-
 html #root, body #root {
-    height: 100%;
+  height: 1%;
 }
-
 html .div-with-button, body .div-with-button {
-    background-color: black;
+  background-color: red;
 }
-
 html .div-with-button button, body .div-with-button button {
-    background-color: #e4c681;
+  background-color: #bb00ff;
+}
+html .div-with-button button:hover, body .div-with-button button:hover {
+  background-color: #ffdc6d;
 }
 
-html .div-with-button button:hover, body .div-with-button button:hover {
-    background-color: #ffe082;
-}
+/*# sourceMappingURL=1.4.1.variables.css.map */

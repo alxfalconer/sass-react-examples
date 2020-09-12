@@ -1,0 +1,23 @@
+@use "three" with (
+$color_three: green,
+);
+@use "three" as custom;
+
+
+.one {
+  // ERROR
+  //background-color: one.$color_one;
+}
+
+.two {
+  // ERROR
+  //background-color: two.$color_two;
+}
+
+.three {
+  background-color: three.$color_three;
+}
+
+.three {
+  background-color: custom.$color_three;
+}

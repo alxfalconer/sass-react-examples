@@ -1,37 +1,19 @@
 html, body {
   height: 100%;
-}
 
-/* Id selector */
-#root {
-  height: 100%;
-}
+  #root {
+    height: 100%;
+  }
 
-/* Class selector */
-.div-with-button {
-  height: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .div-with-button {
+    background-color: black;
 
-  /* Nesting */
-  button {
-    background-color: #e4c681;
-    border: 0;
-    cursor: pointer;
-    transition-duration: 300ms;
-    border-radius: 30px;
-    height: 50px;
-    width: 200px;
-    color: #424242;
-    font-size: 14px;
-    font-weight: 700;
+    button {
+      background-color: #e4c681;
 
-    /* Nesting properties */
-    &:hover {
-      background-color: #ffe082;
-      width: 250px;
+      &:hover {
+        background-color: #ffe082;
+      }
     }
   }
 }
